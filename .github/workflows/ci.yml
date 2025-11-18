@@ -1,0 +1,13 @@
+name: CI Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run test script
+        run: bash test_script.sh
